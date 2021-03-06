@@ -37,6 +37,7 @@ from matplotlib.animation import FuncAnimation
 #DO pin goes to SPI MISO aka pin Physical/Board pin 21 GPIO/BCM pin 9 Wiring Pi pin 13
 #CS Alt0 GPCLK2	S Physical/Board pin 31 GPIO/BCM pin 6 Wiring Pi pin 22
 #CLK alt SPIO SCLK Physical/Board pin 23 GPIO/BCM pin 11 Wiring Pi pin 14
+#VCC not to exceed 4 volts, use 3.3V power
 #Create the SPI bus
 spi = busio.SPI(board.SCK, MOSI=board.MOSI, MISO=board.MISO)
 # create the cs (chip select)
