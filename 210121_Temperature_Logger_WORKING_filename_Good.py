@@ -50,6 +50,11 @@ plt.ion()
 x = []
 y = []
 
+#check to see if this directory exists, and if not, then create it
+import os
+if not os.path.exists('/home/pi/Data/Kiln_Temperature_Data'):
+    os.makedirs('/home/pi/Data/Kiln_Temperature_Data')
+
 filename = 'KilnTemperature-' +str(datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")+'.csv')
 os.chdir('/home/pi/Data/Kiln_Temperature_Data')
 
